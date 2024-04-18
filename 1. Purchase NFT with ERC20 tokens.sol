@@ -38,26 +38,23 @@ contract MyNFT is ERC721URIStorage, Ownable, ReentrancyGuard {
         require(paymentToken.transfer(to, amount), "Withdrawal failed."); // Transfers specified amount of ERC20 tokens to a given address
     }
 }
-// When deploying the Solidity contract you provided, the deployment process will prompt you for inputs because the constructor of the contract requires specific parameters. 
+// When deploying this Solidity contract, the deployment process will prompt you for inputs because the constructor of the contract requires specific parameters. 
 //These parameters initialize the contract with necessary settings for its operation. 
 //Here’s what each parameter means and an example of what you might enter:
 
 //Parameters for deployment:
-
 //name (string): The name of the NFT collection, e.g., "CryptoArt".
 //symbol (string): The symbol or abbreviation for the NFT collection, e.g., "CRT".
 //_paymentToken (address): The address of the ERC20 token that will be used for purchasing the NFTs. This needs to be the smart contract address of an already deployed ERC20 token on the same blockchain where you are deploying your NFT contract.
 //_tokenPrice (uint256): The price for each NFT, denominated in the ERC20 tokens specified by _paymentToken.
 
 //Example of deployment inputs:
-
 //Name: "CryptoArt"
 //ymbol: "CRT"
 //ERC20 Token Address: "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045" (This is a hypothetical address of an ERC20 token deployed on Ethereum; you need to replace it with the actual contract address of the ERC20 token you intend to use.)
 //Token Price: 100 (This means each NFT will cost 100 units of the specified ERC20 token.)
 
 //What happens after deployment?
-
 //After entering these values and deploying the contract:
 
 //Contract initialization: The constructor sets up the NFT contract with the name, symbol, payment token address, and token price you provided. These are critical for the functioning of the NFT contract as they define what token is accepted and how much it costs to mint an NFT.
